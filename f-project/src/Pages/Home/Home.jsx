@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 import "./Home.css";
 import Nav from "../../Components/Nav";
-// import Calculator from "./Calculator";
+import Calculator from "./Calculator";
 import { Context } from "../../Context";
 
-// import Footer from "../../Components/Footer";
-// import RecommendedSkis from "./RecommendedSkis";
+import Footer from "../../Components/Footer";
+import RecomSkis from "./RecomSkis";
 
 const Home = () => {
-//   const context = useContext(Context);
+  const context = useContext(Context);
   return (
     <div className="home-page">
       <Nav></Nav>
-      <h4>
+      <div>
         Our ski size calculator is designed to help you choose the perfect gear
         to make one of the most popular winter activities even more enjoyable.
         Knowing how to size skis can make a real difference to your experience.
@@ -22,14 +22,14 @@ const Home = () => {
         what length is appropriate for you. This is strongly influenced by your
         ability level but also by your riding style and terrain choice. Let us
         guide you through the process below!
-      </h4>
+      </div>
 
-      {/* {!context.data.userData ? (
+      {!context.data.userData ? (
         <Calculator></Calculator>
       ) : (
-        <RecommendedSkis></RecommendedSkis>
+        <RecomSkis></RecomSkis>
       )}
-      <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 };
