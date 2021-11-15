@@ -1,8 +1,9 @@
+import MyRouter from "./Router";
 
 function App() {
   return (
     <div>
-    My React Project
+      <MyRouter/>
     </div>
   );
 }
