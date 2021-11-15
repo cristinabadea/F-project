@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Nav></Nav>
-      <div>
+      <div className="home-intro">
         Our ski size calculator is designed to help you choose the perfect gear
         to make one of the most popular winter activities even more enjoyable.
         Knowing how to size skis can make a real difference to your experience.

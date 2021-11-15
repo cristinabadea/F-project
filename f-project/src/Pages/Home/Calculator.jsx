@@ -6,7 +6,7 @@ import "survey-react/modern.css";
 
 import { Context } from "../../Context";
 
-Survey.StylesManager.applyTheme("bootstrap");
+// Survey.StylesManager.applyTheme("bootstrap");
 
 const Calculator = (props) => {
   const context = useContext(Context);
