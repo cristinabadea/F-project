@@ -10,7 +10,7 @@ import { Context } from "../../Context";
 
 const Calculator = (props) => {
   const context = useContext(Context);
-  console.log(context);
+  // console.log(context);
   const json = {
     title: "Get your perfect ski equipment",
     showProgressBar: "bottom",
