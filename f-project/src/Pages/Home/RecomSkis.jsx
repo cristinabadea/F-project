@@ -3,6 +3,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../../Context";
 
 import { Card, CardGroup } from "react-bootstrap";
+import RecomItem from "./RecomItem";
 
 const RecomSkis = () => {
   const context = useContext(Context);
@@ -14,14 +15,12 @@ const RecomSkis = () => {
     gender: context.data?.userData?.gender ?? "",
     ability: context.data?.userData?.ability ?? "",
     skiStyle: context.data?.userData?.skiStyle ?? "",
-    recom1: " ",
+    recom1: "",
     recom2: "",
     recom3: "",
     image: "",
   });
-  // console.log(answer.height);
-  // console.log(context.data);
-  // console.log(answer);
+  
   useEffect(() => {
     if (
       (answer.height === "146cm - 147cm" ||
@@ -1873,37 +1872,11 @@ const RecomSkis = () => {
 
   return (
     <div>
-      <CardGroup>
-        <Card>
-          <Card.Body>
-            <Card.Title className="text-center">Your answers:</Card.Title>
-            <Card.Text className="text-center">
-              <p>Your height: {context.data?.userData?.height ?? ""}</p>
-              <p>Your weight: {context.data?.userData?.weight ?? ""}</p>
-              <p>Your gender: {context.data?.userData?.gender ?? ""}</p>
-              <p>Your ability level: {context.data?.userData?.ability ?? ""}</p>
-              <p>Your riding style: {context.data?.userData?.skiStyle ?? ""}</p>
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-        <Card>
-          <Card.Body>
-            <Card.Title className="text-center">
-              Our recommendations:
-            </Card.Title>
-            <Card.Text>{answer.recom1}</Card.Text>
-            <Card.Text>{answer.recom2}</Card.Text>
-            <Card.Text>{answer.recom3}</Card.Text>
-            <Card.Img src={answer.image} alt="imagine 1"></Card.Img>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-      </CardGroup>
+      <RecomItem  
+        recom1={answer.recom1}
+        recom2={answer.recom2}
+        recom3={answer.recom3}
+        itemImage={answer.image}></RecomItem>
     </div>
   );
 };
