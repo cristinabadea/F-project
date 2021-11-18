@@ -6,6 +6,8 @@ import "survey-react/modern.css";
 
 import { Context } from "../../Context";
 
+import "./Calculator.css";
+
 // Survey.StylesManager.applyTheme("bootstrap");
 
 const Calculator = (props) => {
@@ -130,13 +132,12 @@ const Calculator = (props) => {
   survey.onComplete.add(function (sender) {
     context.methods.saveUserData(sender.data);
 
-    // document.querySelector("#surveyResult").textContent =
-    //   "Result JSON: \n" + JSON.stringify(sender.data, 3);
   });
 
   return (
     <div id="container-survey">
-      <Survey.Survey model={survey} />
+      <div id='srv'><Survey.Survey model={survey} /></div>
+      
     </div>
   );
 };
