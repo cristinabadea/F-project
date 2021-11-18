@@ -1,5 +1,239 @@
 /** @format */
 
-#container-survey {
-  background-color: aquamarine;
+
+#container-survey{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.sv_header{
+  text-align: center;
+  
+}
+
+.sv_header div h3 span{
+  color: rgba(0, 0, 0, 0.55);
+  
+}
+ .sv_body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ /* START QUIZ BUTTON */
+.sv_nav .sv_start_btn{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 15px;
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 30px;
+  border: rgb(5, 44, 49);
+  margin: 2.3rem;
+
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: rgb(251, 253, 254);
+  background: -moz-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgb(251, 253, 254)),
+    color-stop(50%, rgb(92, 201, 235)),
+    color-stop(100%, rgb(255, 255, 255))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  transition: 0.6s;
+  animation: linear;
+}
+
+.sv_nav .sv_start_btn:hover {
+  color: azure;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px 0px;
+}
+
+
+/* NEXT and PREV BTN and COMPLETE btn*/
+.sv_nav .sv_prev_btn, .sv_nav .sv_next_btn, .sv_nav .sv_complete_btn{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 15px;
+  text-align: center;
+  width: 130px;
+  height: 60px;
+  border-radius: 30px;
+  border: rgb(5, 44, 49);
+  
+
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: rgb(251, 253, 254);
+  background: -moz-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgb(251, 253, 254)),
+    color-stop(50%, rgb(92, 201, 235)),
+    color-stop(100%, rgb(255, 255, 255))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  transition: 0.6s;
+  animation: linear;
+}
+.sv_nav .sv_next_btn:hover{
+  color: azure;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px 0px;
+}
+
+
+.sv_nav .sv_prev_btn:hover {
+  color: azure;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px 0px;
+}
+
+.sv_nav .sv_complete_btn:hover{
+  color: azure;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px 0px;
+}
+/* CHOOSE Form */
+
+.sv_select_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sq_107i, #sq_108i, #sq_109i, #sq_110i, #sq_111i{
+  color:rgba(0, 0, 0, 0.55);
+border: rgb(5, 44, 49);
+  
+
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: rgb(251, 253, 254);
+  background: -moz-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgb(251, 253, 254)),
+    color-stop(50%, rgb(92, 201, 235)),
+    color-stop(100%, rgb(255, 255, 255))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  transition: 0.6s;
+  animation: linear;
+}
+
+/* Number of the page */
+
+.sv_main span {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Quention 1 */
+.sv_row div #sq_107 div .sv_q_title span{
+  color: black;
+}
+/* Question from 2 to 5 */
+#sq_108 div .sv_q_title span, #sq_109 div .sv_q_title span,#sq_110 div .sv_q_title span, #sq_111 div .sv_q_title span{
+  color: black;
+}
+
