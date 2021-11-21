@@ -22,8 +22,12 @@ import MixedOffA2 from '../../Images/MixedOffA2.jpg';
 import { Context } from "../../Context";
 import RecomItem from "./RecomItem";
 
+
 const RecomSkis = () => {
+
   const context = useContext(Context);
+
+
 
   const [answer, setAnswer] = useState({
     height: context.data?.userData?.height ?? "",
@@ -3280,13 +3284,19 @@ const RecomSkis = () => {
     }
   }, []);
 
+ 
+
   return (
     <div>
+      <div>
       <RecomItem  
         recom1={answer.recom1}
         recom2={answer.recom2}
         recom3={answer.recom3}
-        itemImage={answer.image}></RecomItem>
+        itemImage={answer.image}
+        ></RecomItem>
+        </div>
+    
     </div>
   );
 };

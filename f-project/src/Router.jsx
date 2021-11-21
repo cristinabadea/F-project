@@ -16,7 +16,7 @@ const MyRouter = () => {
     <Router>
       <Routes>
         <Route exact path="/about" element={<About/>} />
-        <Route exact path="/blog" element={ <Blog/>} />
+        <Route exact path="/blog" element={<Blog />} />
         <Route path="/" element={ <Home />} />
       </Routes>
     </Router>
