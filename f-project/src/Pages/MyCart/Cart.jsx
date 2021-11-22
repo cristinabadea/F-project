@@ -5,7 +5,7 @@ import { ImageContext } from "../../Contexts/ImageContext";
 
 const Cart = () => {
   const context = useContext(ImageContext);
-  console.log("Cart context: " + context);
+
   return (
     <div>
       <div>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const Context = React.createContext();
 const ContextProvider = (props) => {
-  console.log(props);
+  // console.log(props);
   const [globalState, setGlobalState] = useState({});
 
   const saveUserData = (userData) => {
