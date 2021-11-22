@@ -1,10 +1,12 @@
+/** @format */
+
 import React from "react";
 import MyNav from "../../Components/Nav";
-import WhereToSki from "../About/WhereToSki";
-import GiftForSkiers from "../About/GiftForSkiers";
+import WhereToSki from "./WhereToSki";
+import GiftForSkiers from "./GiftForSkiers";
 import Footer from "../../Components/Footer";
 
-const Blog = () => {
+const MyBlog = () => {
   return (
     <div>
       <MyNav></MyNav>
@@ -18,4 +20,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default MyBlog;

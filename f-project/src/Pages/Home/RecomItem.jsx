@@ -2,9 +2,17 @@
 
 import React from "react";
 import "./RecomItem.css";
+import Cart from "./Cart";
+import { useState } from "react";
 
 const RecomItem = (props) => {
-  console.log(props);
+  const [addProduct, setAddProduct] = useState(0);
+
+  const addToCart = () => {
+    setAddProduct(addProduct + 1);
+    console.log(addProduct);
+  };
+
   return (
     <div>
       <div className="recom-row">
@@ -19,7 +27,11 @@ const RecomItem = (props) => {
         </div>
       </div>
 
-      <button className="recom-btn"> Add to cart</button>
+      <button onClick={addToCart} className="recom-btn">
+        {" "}
+        Add to cart
+      </button>
+      <Cart productNumber={addProduct}></Cart>
     </div>
   );
 };
