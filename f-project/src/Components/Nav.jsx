@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import "./Nav.css";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
@@ -20,11 +22,12 @@ const MyNav = () => {
             <Link to="/">
               <Nav.Link href="#action1">Home</Nav.Link>
             </Link>
-            <Link to="/about">
-              <Nav.Link href="#action2">About us</Nav.Link>
-            </Link>
+
             <Link to="/blog">
               <Nav.Link href="#action2">Blog</Nav.Link>
+            </Link>
+            <Link to="/cart">
+              <Nav.Link href="#action2">My Cart</Nav.Link>
             </Link>
           </Nav>
           <Form className="d-flex my-form">
@@ -45,5 +48,3 @@ const MyNav = () => {
 };
 
 export default MyNav;
-
- 

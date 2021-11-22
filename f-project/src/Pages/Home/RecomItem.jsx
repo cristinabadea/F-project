@@ -2,15 +2,18 @@
 
 import React from "react";
 import "./RecomItem.css";
-import Cart from "./Cart";
+
 import { useState } from "react";
+import MyCart from "../MyCart/MyCart";
+import { Link } from "react-router-dom";
+import Cart from "../MyCart/Cart";
 
 const RecomItem = (props) => {
   const [addProduct, setAddProduct] = useState(0);
 
   const addToCart = () => {
     setAddProduct(addProduct + 1);
-    console.log(addProduct);
+    // console.log(addProduct);
   };
 
   return (
@@ -27,11 +30,13 @@ const RecomItem = (props) => {
         </div>
       </div>
 
-      <button onClick={addToCart} className="recom-btn">
-        {" "}
-        Add to cart
-      </button>
-      <Cart productNumber={addProduct}></Cart>
+      <Link to="./cart">
+        <button className="recom-btn"> Add to cart</button>
+      </Link>
+      <div className="do-not-display">
+        <Cart img={props.itemImage} />
+        <MyCart products={addToCart}></MyCart>
+      </div>
     </div>
   );
 };

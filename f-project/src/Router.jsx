@@ -3,14 +3,15 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import About from "./Pages/About/About";
+
 import MyBlog from "./Pages/Blog/Blog";
+import MyCart from "./Pages/MyCart/MyCart";
 
 const MyRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/about" element={<About />} />
+        <Route exact path="/cart" element={<MyCart />} />
         <Route exact path="/blog" element={<MyBlog />} />
         <Route path="/" element={<Home />} />
       </Routes>

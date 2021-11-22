@@ -3,20 +3,23 @@
 import React from "react";
 import Footer from "../../Components/Footer";
 import MyNav from "../../Components/Nav";
-import "./About.css";
+import "./MyCart.css";
+import Cart from "./Cart";
+import EmptyCart from "./EmptyCart";
 
-const About = () => {
+const MyCart = (props) => {
+  console.log(props.products);
+
   return (
     <div className="about-page">
       <div>
         <MyNav></MyNav>
+        <EmptyCart />
+        <Cart />
         <Footer></Footer>
-        <hr />
       </div>
     </div>
   );
 };
 
-export default About;
-
- 
+export default MyCart;

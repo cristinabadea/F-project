@@ -3,14 +3,13 @@
 import React from "react";
 
 const Cart = (props) => {
-  console.log(props);
   return (
     <div>
       <div>
-        <title> Your cart</title>
-        <img src=""></img>
+        <h3> Your cart</h3>
+        <img src={props.img}></img>
         <div>
-          <p> Number of products:{props.productNumber} </p>
+          <p> Number of products: {props.addToCart}</p>
           <button> Buy</button>
           <button> Delete</button>
         </div>
