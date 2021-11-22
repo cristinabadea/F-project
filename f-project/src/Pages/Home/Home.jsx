@@ -1,8 +1,10 @@
+/** @format */
+
 import React, { useContext } from "react";
 import "./Home.css";
 import Nav from "../../Components/Nav";
 import Calculator from "./Calculator";
-import { Context } from "../../Context";
+import { Context } from "../../Contexts/Context";
 
 import Footer from "../../Components/Footer";
 import RecomSkis from "./RecomSkis";
@@ -35,5 +37,3 @@ const Home = () => {
 };
 
 export default Home;
-
- 

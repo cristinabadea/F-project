@@ -3,19 +3,7 @@
 import React from "react";
 import "./RecomItem.css";
 
-import { useState } from "react";
-import MyCart from "../MyCart/MyCart";
-import { Link } from "react-router-dom";
-import Cart from "../MyCart/Cart";
-
 const RecomItem = (props) => {
-  const [addProduct, setAddProduct] = useState(0);
-
-  const addToCart = () => {
-    setAddProduct(addProduct + 1);
-    // console.log(addProduct);
-  };
-
   return (
     <div>
       <div className="recom-row">
@@ -29,14 +17,7 @@ const RecomItem = (props) => {
           <p>{props.recom3}</p>
         </div>
       </div>
-
-      <Link to="./cart">
-        <button className="recom-btn"> Add to cart</button>
-      </Link>
-      <div className="do-not-display">
-        <Cart img={props.itemImage} />
-        <MyCart products={addToCart}></MyCart>
-      </div>
+      <button className="recom-btn"> Add to cart</button>
     </div>
   );
 };

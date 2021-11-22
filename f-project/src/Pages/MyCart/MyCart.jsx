@@ -8,7 +8,7 @@ import Cart from "./Cart";
 import EmptyCart from "./EmptyCart";
 
 const MyCart = (props) => {
-  console.log(props.products);
+  // console.log(props.products);
 
   return (
     <div className="about-page">

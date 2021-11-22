@@ -21,12 +21,12 @@ import MixedOffInt2 from "../../Images/MixedOffInt2.jpg";
 import MixedOffA1 from "../../Images/MixedOffA1.jpg";
 import MixedOffA2 from "../../Images/MixedOffA2.jpg";
 
-import { Context } from "../../Context";
+import { Context } from "../../Contexts/Context";
 import RecomItem from "./RecomItem";
 
 const RecomSkis = () => {
   const context = useContext(Context);
-
+  console.log("recomSkis context " + context);
   const [answer, setAnswer] = useState({
     height: context.data?.userData?.height ?? "",
     weight: context.data?.userData?.weight ?? "",

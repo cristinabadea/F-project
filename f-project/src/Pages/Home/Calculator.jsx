@@ -1,16 +1,18 @@
+/** @format */
+
 import React, { useContext } from "react";
 
 import * as Survey from "survey-react";
 
 import "survey-react/modern.css";
 
-import { Context } from "../../Context";
+import { Context } from "../../Contexts/Context";
 
 import "./Calculator.css";
 
 // Survey.StylesManager.applyTheme("bootstrap");
 
-const Calculator = (props) => {
+const Calculator = () => {
   const context = useContext(Context);
   // console.log(context);
   const json = {
@@ -131,13 +133,13 @@ const Calculator = (props) => {
   const survey = new Survey.Model(json);
   survey.onComplete.add(function (sender) {
     context.methods.saveUserData(sender.data);
-
   });
 
   return (
     <div id="container-survey">
-      <div id='srv'><Survey.Survey model={survey} /></div>
-      
+      <div id="srv">
+        <Survey.Survey model={survey} />
+      </div>
     </div>
   );
 };
