@@ -1,16 +1,16 @@
 /** @format */
 
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ImageContext } from "../../Contexts/ImageContext";
 
 const Cart = () => {
-  const context = useContext(ImageContext);
-
+  const imageContext = useContext(ImageContext);
+  console.log(imageContext);
   return (
     <div>
       <div>
         <h3> Your cart</h3>
-        <img src=""></img>
+        <img src={imageContext.products.title}></img>
         <div>
           <p> Number of products:</p>
           <button> Buy</button>

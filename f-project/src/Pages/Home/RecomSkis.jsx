@@ -1,32 +1,17 @@
 /** @format */
 
 import React, { useContext, useState, useEffect } from "react";
-
-import MalePisteB1 from "../../Images/MalePisteB1.png";
-import MalePisteB2 from "../../Images/MalePisteB2.png";
-import MalePisteI1 from "../../Images/MalePisteI1.png";
-import MalePisteI2 from "../../Images/MalePisteI2.png";
-import MalePisteA1 from "../../Images/MalePisteA1.png";
-import MalePisteA2 from "../../Images/MalePisteA2.png";
-import FemPisteB1 from "../../Images/FemPisteB1.jpg";
-import FemPisteB2 from "../../Images/FemPisteB2.jpg";
-import FemPisteInt1 from "../../Images/FemPisteInt1.jpg";
-import FemPisteInt2 from "../../Images/FemPisteInt2.jpg";
-import FemPisteA1 from "../../Images/FemPisteA1.jpg";
-import FemPisteA2 from "../../Images/FemPisteA2.jpg";
-import MixedOffB1 from "../../Images/MixedOffB1.jpg";
-import MixedOffB2 from "../../Images/MixedOffB2.jpg";
-import MixedOffInt1 from "../../Images/MixedOffInt1.jpg";
-import MixedOffInt2 from "../../Images/MixedOffInt2.jpg";
-import MixedOffA1 from "../../Images/MixedOffA1.jpg";
-import MixedOffA2 from "../../Images/MixedOffA2.jpg";
-
 import { Context } from "../../Contexts/Context";
+import { ImageContext } from "../../Contexts/ImageContext";
 import RecomItem from "./RecomItem";
+import { Link } from "react-router-dom";
+import ItemDetails from "./ItemDetails";
 
 const RecomSkis = () => {
   const context = useContext(Context);
-  console.log("recomSkis context " + context);
+  const imageContext = useContext(ImageContext);
+
+  console.log("recom skis: " + imageContext);
   const [answer, setAnswer] = useState({
     height: context.data?.userData?.height ?? "",
     weight: context.data?.userData?.weight ?? "",
@@ -48,7 +33,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 135 - 138 cm.`,
@@ -60,7 +44,7 @@ const RecomSkis = () => {
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
-        image: MalePisteB1,
+        image: imageContext.products[0].imageUrl,
       });
 
       // Male - b - OP
@@ -73,7 +57,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 135 - 138 cm.`,
@@ -87,7 +70,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       // Male - int - p
@@ -98,7 +81,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
 
@@ -112,7 +94,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI1,
+        image: imageContext.products[2].imageUrl,
       });
 
       // Male - int - op
@@ -125,7 +107,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 136 - 139 cm.`,
@@ -137,7 +118,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       // Male - adv - p
@@ -148,7 +129,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
 
@@ -166,7 +146,7 @@ const RecomSkis = () => {
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
-        image: MalePisteA1,
+        image: imageContext.products[4].imageUrl,
       });
 
       // male - adv - op
@@ -179,7 +159,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 137 - 140 cm.`,
@@ -197,7 +176,7 @@ const RecomSkis = () => {
         If you like to go fast, have good physical fitness and a solid technical level, these more sturdy and responsive skis are for you.
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
-        image: MixedOffA1,
+        image: imageContext.products[17].imageUrl,
       });
 
       // fem - b - p
@@ -208,14 +187,13 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 135 - 138 cm.`,
         recom2: `Being a beginer, it is recommended to choose shorter skis. That we'll give you more control and stability and you will be able to learn the moves in no time. 
         Typical beginner ski qualities include:  softer flex, narrower widths, composite, foam or softer wood cores, and capped constructions. The idea is to create a ski that is easy to turn and very forgiving if you do make a mistake. Piste skis: This is probably the most traditional way of skiing. Long and clean turns or shorter arcs down groomers make the essence of alpine skiing. Whether you skid your turns or carve them, you ride down groomed snow and pistes all day, having fun varying the length of your turns and your style.`,
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best. They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
-        image: FemPisteB1,
+        image: imageContext.products[6].imageUrl,
       });
 
       // fem - b - op
@@ -228,7 +206,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 135 - 138 cm.`,
@@ -243,7 +220,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
       //fem - int - p
     } else if (
@@ -253,7 +230,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 136 - 139 cm.`,
@@ -266,7 +242,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt1,
+        image: imageContext.products[8].imageUrl,
       });
 
       //fem - int - op
@@ -279,7 +255,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 136 - 139 cm.`,
@@ -291,7 +266,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       // fem - adv - p
@@ -302,7 +277,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 137 - 140 cm.`,
@@ -320,7 +294,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA1,
+        image: imageContext.products[10].imageUrl,
       });
 
       //fem - adv - op
@@ -333,7 +307,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 137 - 140 cm.`,
@@ -352,7 +325,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       // male - b - p
@@ -363,7 +336,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 140 - 142 cm.`,
@@ -378,7 +350,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB2,
+        image: imageContext.products[1].imageUrl,
       });
       //male - b - op
     } else if (
@@ -390,7 +362,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 140 - 142 cm.`,
@@ -404,7 +375,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //male - int - p
@@ -415,7 +386,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 141 - 144 cm.`,
@@ -428,7 +398,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI2,
+        image: imageContext.products[3].imageUrl,
       });
 
       // male - int - op
@@ -441,7 +411,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 141 - 144 cm.`,
@@ -453,7 +422,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       // male - adv - p
@@ -464,7 +433,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 142 - 145 cm.`,
@@ -482,7 +450,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA2,
+        image: imageContext.products[5].imageUrl,
       });
 
       // male - adv - op
@@ -495,7 +463,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 142 - 145 cm.`,
@@ -514,7 +481,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //fem - b - p
@@ -525,7 +492,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 140 - 142 cm.`,
@@ -540,7 +506,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB2,
+        image: imageContext.products[7].imageUrl,
       });
 
       //fem - b - op
@@ -553,7 +519,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 140 - 142 cm.`,
@@ -567,7 +532,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //fem - int - p
@@ -578,7 +543,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 141 - 143 cm.`,
@@ -591,7 +555,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt2,
+        image: imageContext.products[9].imageUrl,
       });
 
       // fem - int - op
@@ -604,7 +568,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 141 - 143 cm.`,
@@ -616,7 +579,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       // fem - adv - p
@@ -627,7 +590,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 142 - 144 cm.`,
@@ -645,7 +607,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA2,
+        image: imageContext.products[11].imageUrl,
       });
 
       // fem - adv - op
@@ -658,7 +620,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
 
@@ -678,7 +639,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       // male - b - p
@@ -689,7 +650,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
 
@@ -705,7 +665,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB1,
+        image: imageContext.products[0].imageUrl,
       });
 
       // male - b - op
@@ -718,7 +678,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 145 - 148 cm.`,
@@ -732,7 +691,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[13].imageUrl,
       });
 
       // male - int - p
@@ -743,7 +702,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 146 - 149 cm.`,
@@ -756,7 +714,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI1,
+        image: imageContext.products[2].imageUrl,
       });
 
       //male - int - op
@@ -769,7 +727,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 146 - 149 cm.`,
@@ -781,7 +738,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       // male - adv - p
@@ -792,7 +749,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 147 - 150 cm.`,
@@ -810,7 +766,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA1,
+        image: imageContext.products[5].imageUrl,
       });
 
       // male - adv - op
@@ -823,7 +779,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 147 - 150 cm.`,
@@ -842,7 +797,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //fem - b -p
@@ -853,7 +808,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 144 - 147 cm.`,
@@ -868,7 +822,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB1,
+        image: imageContext.products[6].imageUrl,
       });
 
       //fem - b - op
@@ -881,7 +835,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 144 - 147 cm.`,
@@ -895,7 +848,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //fem - int - p
@@ -906,7 +859,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 145 - 148 cm.`,
@@ -918,7 +870,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt1,
+        image: imageContext.products[8].imageUrl,
       });
 
       //fem - int - op
@@ -931,7 +883,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 145 - 148 cm.`,
@@ -943,7 +894,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //fem - adv - p
@@ -954,7 +905,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 146 - 149 cm.`,
@@ -972,7 +922,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA1,
+        image: imageContext.products[10].imageUrl1,
       });
 
       //fem-adv -op
@@ -985,7 +935,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 146 - 149 cm.`,
@@ -1004,7 +953,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       // male - b - p
@@ -1015,7 +964,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 150 - 152 cm.`,
@@ -1030,7 +978,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB2,
+        image: imageContext.products[1].imageUrl,
       });
 
       //male - b - op
@@ -1043,7 +991,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 150 - 152 cm.`,
@@ -1057,7 +1004,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       // male - int- p
@@ -1068,7 +1015,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 151 - 153 cm.`,
@@ -1081,7 +1027,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI2,
+        image: imageContext.products[3].imageUrl,
       });
 
       //male - int - op
@@ -1094,7 +1040,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 151 - 153 cm.`,
@@ -1106,7 +1051,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //male - adv - p
@@ -1117,7 +1062,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 152 - 154 cm.`,
@@ -1135,7 +1079,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA2,
+        image: imageContext.products[5].imageUrl,
       });
 
       // male - adv -op
@@ -1148,7 +1092,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 152 - 154 cm.`,
@@ -1167,7 +1110,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //fem-b-p
@@ -1178,7 +1121,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 149 - 151 cm.`,
@@ -1193,7 +1135,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB1,
+        image: imageContext.products[6].imageUrl,
       });
 
       // fem - b - op
@@ -1206,7 +1148,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 149 - 151 cm.`,
@@ -1220,7 +1161,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //fem - int - p
@@ -1231,7 +1172,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 150 - 152 cm.`,
@@ -1244,7 +1184,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt1,
+        image: imageContext.products[8].imageUrl,
       });
 
       // fem - int - op
@@ -1257,7 +1197,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 150 - 152 cm.`,
@@ -1269,7 +1208,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //fem - adv - p
@@ -1280,7 +1219,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 151 - 153 cm.`,
@@ -1298,7 +1236,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA1,
+        image: imageContext.products[10].imageUrl,
       });
 
       //fem-adv-op
@@ -1311,7 +1249,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 151 - 153 cm.`,
@@ -1330,7 +1267,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[18].imageUrl,
       });
 
       //male - b -p
@@ -1341,7 +1278,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 154 - 156 cm.`,
@@ -1356,7 +1292,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB2,
+        image: imageContext.products[1].imageUrl,
       });
 
       // male - b - op
@@ -1369,7 +1305,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 154 - 156 cm.`,
@@ -1383,7 +1318,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //male - int - p
@@ -1394,7 +1329,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 155 - 157 cm.`,
@@ -1407,7 +1341,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI2,
+        image: imageContext.products[3].imageUrl,
       });
 
       //male-int - op
@@ -1420,7 +1354,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 155 - 157 cm.`,
@@ -1432,7 +1365,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //male - adv - p
@@ -1443,7 +1376,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 156 - 158 cm.`,
@@ -1461,7 +1393,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA2,
+        image: imageContext.products[5].imageUrl,
       });
 
       //male - adv - op
@@ -1474,7 +1406,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 156 - 158 cm.`,
@@ -1493,7 +1424,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //fem - b -p
@@ -1504,7 +1435,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 154 - 157 cm.`,
@@ -1519,7 +1449,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB1,
+        image: imageContext.products[6].imageUrl,
       });
 
       //fem - b - op
@@ -1532,7 +1462,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 154 - 157 cm.`,
@@ -1546,7 +1475,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //fem - int - p
@@ -1557,7 +1486,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 155 - 158 cm.`,
@@ -1570,7 +1498,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt1,
+        image: imageContext.products[8].imageUrl,
       });
 
       //fem - int - op
@@ -1583,7 +1511,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 155 - 158 cm.`,
@@ -1595,7 +1522,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //fem - adv - p
@@ -1606,7 +1533,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 156 - 159 cm.`,
@@ -1624,7 +1550,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA1,
+        image: imageContext.products[10].imageUrl,
       });
 
       //fem - adv - op
@@ -1637,7 +1563,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 156 - 159 cm.`,
@@ -1656,7 +1581,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //male - b-p
@@ -1667,7 +1592,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 160 - 164 cm.`,
@@ -1682,7 +1606,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB2,
+        image: imageContext.products[1].imageUrl,
       });
 
       // male - b -op
@@ -1695,7 +1619,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 160 - 164 cm.`,
@@ -1709,7 +1632,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //male - int - p
@@ -1720,7 +1643,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 161 - 165 cm.`,
@@ -1733,7 +1655,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI2,
+        image: imageContext.products[3].imageUrl,
       });
 
       //male - int - op
@@ -1746,7 +1668,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 161 - 165 cm.`,
@@ -1758,7 +1679,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //male - adv - p
@@ -1769,7 +1690,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 162 - 166 cm.`,
@@ -1787,7 +1707,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA1,
+        image: imageContext.products[4].imageUrl,
       });
 
       //male - adv - op
@@ -1800,7 +1720,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 162 - 166 cm.`,
@@ -1819,7 +1738,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       //fem - b  - p
@@ -1830,7 +1749,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 160 - 164 cm.`,
@@ -1844,7 +1762,7 @@ const RecomSkis = () => {
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
-        image: FemPisteB2,
+        image: imageContext.products[7].imageUrl,
       });
 
       //fem - b - op
@@ -1857,7 +1775,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 160 - 164 cm.`,
@@ -1871,7 +1788,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //fem - int - p
@@ -1882,7 +1799,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 161 - 165 cm.`,
@@ -1895,7 +1811,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt2,
+        image: imageContext.products[9].imageUrl,
       });
 
       //fem - int - op
@@ -1908,7 +1824,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 161 - 165 cm.`,
@@ -1919,7 +1834,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //fem-adv - p
@@ -1930,7 +1845,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 160 - 164 cm.`,
@@ -1948,7 +1862,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA2,
+        image: imageContext.products[11].imageUrl,
       });
 
       //fem - adv - op
@@ -1961,7 +1875,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 160 - 164 cm.`,
@@ -1980,7 +1893,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       //male - b -p
@@ -1991,7 +1904,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 165 - 168 cm.`,
@@ -2005,7 +1917,7 @@ const RecomSkis = () => {
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
-        image: MalePisteB2,
+        image: imageContext.products[1].imageUrl,
       });
 
       // male - b -op
@@ -2018,7 +1930,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 165 - 168 cm.`,
@@ -2031,7 +1942,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //male - int - p
@@ -2042,7 +1953,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 166 - 169 cm.`,
@@ -2055,7 +1965,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI2,
+        image: imageContext.products[3].imageUrl,
       });
 
       //male - int - op
@@ -2068,7 +1978,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 166 - 169 cm.`,
@@ -2080,7 +1989,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //male - adv - p
@@ -2091,7 +2000,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 167 - 170 cm.`,
@@ -2108,7 +2016,7 @@ const RecomSkis = () => {
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
-        image: MalePisteA2,
+        image: imageContext.products[5].imageUrl,
       });
 
       //male - adv - op
@@ -2121,7 +2029,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 167 - 170 cm.`,
@@ -2140,7 +2047,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       // fem - b - p
@@ -2151,7 +2058,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 165 - 168 cm.`,
@@ -2166,7 +2072,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB1,
+        image: imageContext.products[6].imageUrl,
       });
 
       //fem - b - op
@@ -2179,7 +2085,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 165 - 168 cm.`,
@@ -2193,7 +2098,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //fem - int - p
@@ -2204,7 +2109,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 166 - 169 cm.`,
@@ -2217,7 +2121,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt1,
+        image: imageContext.products[8].imageUrl,
       });
 
       //fem - int - op
@@ -2230,7 +2134,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 166 - 169 cm.`,
@@ -2242,7 +2145,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //fem - adv - p
@@ -2253,7 +2156,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 167 - 170 cm.`,
@@ -2271,7 +2173,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA1,
+        image: imageContext.products[10].imageUrl,
       });
 
       // fem - adv - op
@@ -2284,7 +2186,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 167 - 170 cm.`,
@@ -2303,7 +2204,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //male - b -p
@@ -2314,7 +2215,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 168 - 171 cm.`,
@@ -2329,7 +2229,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB1,
+        image: imageContext.products[0].imageUrl,
       });
 
       // male - b - op
@@ -2342,7 +2242,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 168 - 171 cm.`,
@@ -2356,7 +2255,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       // male - int - p
@@ -2367,7 +2266,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 169 - 172 cm.`,
@@ -2380,7 +2278,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI1,
+        image: imageContext.products[2].imageUrl,
       });
 
       //male - int - op
@@ -2393,7 +2291,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 169 - 172 cm.`,
@@ -2405,7 +2302,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //male - adv - p
@@ -2416,7 +2313,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 170 - 173 cm.`,
@@ -2434,7 +2330,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA1,
+        image: imageContext.products[4].imageUrl,
       });
 
       //male - adv - op
@@ -2447,7 +2343,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 170 - 173 cm.`,
@@ -2466,7 +2361,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       //fem - b - p
@@ -2477,7 +2372,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 168 - 170 cm.`,
@@ -2492,7 +2386,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB2,
+        image: imageContext.products[7].imageUrl,
       });
 
       //fem - b -op
@@ -2505,7 +2399,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 168 - 170 cm.`,
@@ -2519,7 +2412,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //fem - int - p
@@ -2530,7 +2423,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 169 - 171 cm.`,
@@ -2543,7 +2435,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt2,
+        image: imageContext.products[9].imageUrl,
       });
 
       //fem - int - op
@@ -2556,7 +2448,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 169 - 171 cm.`,
@@ -2568,7 +2459,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //fem - adv - p
@@ -2579,7 +2470,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 170 - 172 cm.`,
@@ -2597,7 +2487,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA2,
+        image: imageContext.products[11].imageUrl,
       });
 
       //fem - adv - op
@@ -2610,7 +2500,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 170 - 172 cm.`,
@@ -2629,7 +2518,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //male - b - p
@@ -2640,7 +2529,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 172 - 175 cm.`,
@@ -2655,7 +2543,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB2,
+        image: imageContext.products[1].imageUrl,
       });
 
       //male - b -op
@@ -2668,7 +2556,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 172 - 175 cm.`,
@@ -2682,7 +2569,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //male - int - p
@@ -2693,7 +2580,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 173 - 176 cm.`,
@@ -2706,7 +2592,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI2,
+        image: imageContext.products[3].imageUrl,
       });
 
       //MALE - int - op
@@ -2719,7 +2605,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 173 - 176 cm.`,
@@ -2731,7 +2616,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //male - adv - p
@@ -2742,7 +2627,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 174 - 177 cm.`,
@@ -2760,7 +2644,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA2,
+        image: imageContext.products[5].imageUrl,
       });
 
       //MALE - adv - op
@@ -2773,7 +2657,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 174 - 177 cm.`,
@@ -2792,7 +2675,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //fem - b -p
@@ -2803,7 +2686,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 172 - 175 cm.`,
@@ -2818,7 +2700,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB1,
+        image: imageContext.products[6].imageUrl,
       });
 
       // fem - b -op
@@ -2831,7 +2713,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 172 - 175 cm.`,
@@ -2845,7 +2726,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //fem - int - p
@@ -2856,7 +2737,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 173 - 176 cm.`,
@@ -2869,7 +2749,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt1,
+        image: imageContext.products[8].imageUrl,
       });
 
       //fem - int - op
@@ -2882,7 +2762,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 173 - 176 cm.`,
@@ -2894,7 +2773,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //fem - adv - p
@@ -2905,7 +2784,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 174 - 177 cm.`,
@@ -2923,7 +2801,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA1,
+        image: imageContext.products[10].imageUrl,
       });
 
       //fem -adv - op
@@ -2936,7 +2814,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 174 - 177 cm.`,
@@ -2955,7 +2832,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
 
       //male - b -p
@@ -2965,7 +2842,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 176 - 180 cm.`,
@@ -2980,7 +2856,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteB1,
+        image: imageContext.products[0].imageUrl,
       });
 
       //male - b -op
@@ -2992,7 +2868,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 176 - 180 cm.`,
@@ -3006,7 +2881,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB1,
+        image: imageContext.products[12].imageUrl,
       });
 
       //male - int - p
@@ -3016,7 +2891,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 177 - 181 cm.`,
@@ -3029,7 +2903,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteI1,
+        image: imageContext.products[2].imageUrl,
       });
 
       //male - int - op
@@ -3041,7 +2915,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 177 - 181 cm.`,
@@ -3053,7 +2926,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt1,
+        image: imageContext.products[14].imageUrl,
       });
 
       //male -adv -p
@@ -3063,7 +2936,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 179 - 182 cm.`,
@@ -3081,7 +2953,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: MalePisteA1,
+        image: imageContext.products[4].imageUrl,
       });
 
       //male -adv - op
@@ -3093,7 +2965,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 179 - 182 cm.`,
@@ -3112,7 +2983,7 @@ const RecomSkis = () => {
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
 
-        image: MixedOffA1,
+        image: imageContext.products[16].imageUrl,
       });
 
       //fem - b -p
@@ -3122,7 +2993,6 @@ const RecomSkis = () => {
       answer.ability === "Beginer" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 176 - 180 cm.`,
@@ -3137,7 +3007,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteB2,
+        image: imageContext.products[7].imageUrl,
       });
 
       //fem - b -op
@@ -3149,7 +3019,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 176 - 180 cm.`,
@@ -3163,7 +3032,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 5 weeks.
                 Off piste experience: 0 – 3 weeks.`,
 
-        image: MixedOffB2,
+        image: imageContext.products[13].imageUrl,
       });
 
       //fem - int - p
@@ -3173,7 +3042,6 @@ const RecomSkis = () => {
       answer.ability === "Intermediate" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 177 - 181 cm.`,
@@ -3186,7 +3054,7 @@ const RecomSkis = () => {
         Skiing on piste will teach you how to balance and how to turn. In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteInt2,
+        image: imageContext.products[9].imageUrl,
       });
 
       //fem - int - op
@@ -3198,7 +3066,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 177 - 181 cm.`,
@@ -3210,7 +3077,7 @@ const RecomSkis = () => {
         recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
-        image: MixedOffInt2,
+        image: imageContext.products[15].imageUrl,
       });
 
       //fem - adv - p
@@ -3220,7 +3087,6 @@ const RecomSkis = () => {
       answer.ability === "Expert" &&
       answer.skiStyle === "On piste"
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 178 - 181 cm.`,
@@ -3238,7 +3104,7 @@ const RecomSkis = () => {
         In order to link long turns at high speed on hard snow, piste skis featuring a traditional camber and a waist sizing below 86mm are best.
         They deliver quicker edge to edge transitions and offer more grip as well as precise edge control.`,
 
-        image: FemPisteA2,
+        image: imageContext.products[11].imageUrl,
       });
 
       //fem - adv -op
@@ -3250,7 +3116,6 @@ const RecomSkis = () => {
         answer.skiStyle === "Ski touring" ||
         answer.skiStyle === "Ski mountaineering")
     ) {
-      console.log("change answer");
       setAnswer({
         ...answer,
         recom1: `Suggested ski lengh: 178 - 181 cm.`,
@@ -3268,7 +3133,7 @@ const RecomSkis = () => {
         If you like to go fast, have good physical fitness and a solid technical level, these more sturdy and responsive skis are for you.
         Depending on your preference, you have the choice between more sidecut for tight turns or less sidecut for wide turns. ‘Race’ skis are also available for very good skiers.
         They are developed based on the same technologies used to build the racing skis of professional athletes.`,
-        image: MixedOffA2,
+        image: imageContext.products[17].imageUrl,
       });
     }
   }, []);

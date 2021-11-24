@@ -3,16 +3,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import MyRouter from "./Router";
 import { ContextProvider } from "./Contexts/Context";
-import ImageContextProvider from "./Contexts/ImageContext";
+import { ImageContextProvider } from "./Contexts/ImageContext";
 
 function App() {
   return (
     <div className="App">
-      <ContextProvider>
-        <ImageContextProvider>
+      <ImageContextProvider>
+        <ContextProvider>
           <MyRouter></MyRouter>
-        </ImageContextProvider>
-      </ContextProvider>
+        </ContextProvider>
+      </ImageContextProvider>
     </div>
   );
 }
