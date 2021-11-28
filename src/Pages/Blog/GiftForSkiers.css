@@ -1,0 +1,171 @@
+/** @format */
+
+.blog-page-title {
+  color: rgba(0, 0, 0, 0.55);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: rgb(251, 253, 254);
+  background: -moz-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgb(251, 253, 254)),
+    color-stop(50%, rgb(92, 201, 235)),
+    color-stop(100%, rgb(255, 255, 255))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  padding-left: 2rem;
+}
+#gift-image {
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.5s;
+  animation: ease-in;
+  border-radius: 15px;
+
+  border-color: rgb(127, 204, 228);
+  background-color: none;
+  height: 25rem;
+  max-width: 25%;
+  position: relative;
+  margin-left: 5%;
+}
+.description-div {
+  color: rgba(0, 0, 0, 0.55);
+  max-width: 320px;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: 5%;
+  margin-bottom: 1rem;
+}
+.description-div p {
+  font-size: 22px;
+}
+.container {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  max-width: 95%;
+  background: rgb(251, 253, 254);
+  background: -moz-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgb(251, 253, 254)),
+    color-stop(50%, rgb(92, 201, 235)),
+    color-stop(100%, rgb(255, 255, 255))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.buy-button {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 20px;
+  text-align: center;
+
+  border-radius: 3px;
+  border: rgb(5, 44, 49);
+
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: rgb(251, 253, 254);
+  background: -moz-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgb(251, 253, 254)),
+    color-stop(50%, rgb(92, 201, 235)),
+    color-stop(100%, rgb(255, 255, 255))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(92, 201, 235) 50%,
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  transition: 0.6s;
+  animation: linear;
+}
