@@ -1,0 +1,10 @@
+/** @format */
+
+.image-text-description {
+  display: flex;
+}
+
+.image-text-description p {
+  text-align: justify;
+  margin: 1rem;
+}
