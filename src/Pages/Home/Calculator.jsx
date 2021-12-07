@@ -10,8 +10,6 @@ import { Context } from "../../Contexts/Context";
 
 import "./Calculator.css";
 
-// Survey.StylesManager.applyTheme("bootstrap");
-
 const Calculator = () => {
   const context = useContext(Context);
   // console.log(context);
@@ -34,7 +32,7 @@ const Calculator = () => {
           {
             type: "dropdown",
             name: "height",
-            title: "What is your height? (cm)",
+            title: "Please select your height... (cm)",
             choices: [
               "146cm - 147cm",
               "148cm - 150cm",
@@ -64,7 +62,7 @@ const Calculator = () => {
           {
             type: "dropdown",
             name: "weight",
-            title: "What is your weight?(kg)'",
+            title: "Please select your weight... (kg)",
             choices: [
               "45kg - 50kg",
               "50kg - 54kg",
@@ -93,7 +91,7 @@ const Calculator = () => {
           {
             type: "dropdown",
             name: "gender",
-            title: "What is your gender?",
+            title: "Please select your gender...",
 
             choices: ["Male", "Female"],
           },
@@ -104,7 +102,7 @@ const Calculator = () => {
           {
             type: "dropdown",
             name: "ability",
-            title: "What is your ability level",
+            title: "Please select your ability level...",
 
             choices: ["Beginer", "Intermediate", "Expert"],
           },
@@ -115,7 +113,7 @@ const Calculator = () => {
           {
             type: "dropdown",
             name: "skiStyle",
-            title: "What is your riding style?",
+            title: "Please select your riding style...",
 
             choices: [
               "On piste",

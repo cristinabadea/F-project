@@ -6,13 +6,19 @@
   align-items: center;
   flex-direction: column;
 }
-
+#srv {
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
 .sv_header {
   text-align: center;
 }
 
 .sv_header div h3 span {
-  color: rgba(0, 0, 0, 0.55);
+  color: black;
+  font-size: 2rem;
 }
 .sv_body {
   display: flex;
@@ -26,15 +32,16 @@
 #sp_109 .sv_p_root .sv_row div #sq_109 div h5 span,
 #sp_110 .sv_p_root .sv_row div #sq_110 div h5 span,
 #sp_111 .sv_p_root .sv_row div #sq_111 div h5 span {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 #sp_107 .sv_p_root .sv_row div #sq_107 div h5,
 #sp_108 .sv_p_root .sv_row div #sq_108 div h5,
 #sp_109 .sv_p_root .sv_row div #sq_109 div h5,
 #sp_110 .sv_p_root .sv_row div #sq_110 div h5,
 #sp_111 .sv_p_root .sv_row div #sq_111 div h5 {
-  margin: 1.5rem;
+  margin: 1.3rem;
 }
+
 /* START QUIZ BUTTON */
 .sv_nav .sv_start_btn {
   margin-top: 1rem;
@@ -182,14 +189,17 @@
   justify-content: center;
   align-items: center;
 }
+
 #sq_107i,
 #sq_108i,
 #sq_109i,
 #sq_110i,
 #sq_111i {
   color: rgba(0, 0, 0, 0.55);
-  border: rgb(5, 44, 49);
-
+  border: rgb(185, 229, 235);
+  width: 20rem;
+  text-align: center;
+  height: 2rem;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   background: rgb(251, 253, 254);
@@ -199,7 +209,7 @@
     rgb(92, 201, 235) 50%,
     rgb(255, 255, 255) 100%
   );
-  background: -webkit-gradient(
+  background: -webkit-linear-gradient(
     left top,
     right top,
     color-stop(0%, rgb(251, 253, 254)),
