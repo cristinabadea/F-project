@@ -1,42 +1,14 @@
+/** @format */
+
 .main-footer {
-  background: rgb(251, 253, 254);
-  background: -moz-linear-gradient(
-    left,
-    rgb(251, 253, 254) 0%,
-    rgb(92, 201, 235) 50%,
-    rgb(255, 255, 255) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgb(251, 253, 254)),
-    color-stop(50%, rgb(92, 201, 235)),
-    color-stop(100%, rgb(255, 255, 255))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgb(251, 253, 254) 0%,
-    rgb(92, 201, 235) 50%,
-    rgb(255, 255, 255) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgb(251, 253, 254) 0%,
-    rgb(92, 201, 235) 50%,
-    rgb(255, 255, 255) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgb(251, 253, 254) 0%,
-    rgb(92, 201, 235) 50%,
-    rgb(255, 255, 255) 100%
-  );
+  border-top: 2px solid rgb(91, 91, 91);
   background: linear-gradient(
     to right,
     rgb(251, 253, 254) 0%,
-    rgb(92, 201, 235) 50%,
+    rgb(201, 216, 249),
     rgb(255, 255, 255) 100%
   );
+
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
 }
 .row {

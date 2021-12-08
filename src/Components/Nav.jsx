@@ -26,21 +26,7 @@ const MyNav = () => {
             <Link to="/blog">
               <Nav.Link href="#action2">Blog</Nav.Link>
             </Link>
-            <Link to="/cart">
-              <Nav.Link href="#action2">My Cart</Nav.Link>
-            </Link>
           </Nav>
-          <Form className="d-flex my-form">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="mr-2"
-              aria-label="Search"
-            />
-            <Button id="nav-button" variant="outline-success">
-              Search
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Navbar>
     </div>
