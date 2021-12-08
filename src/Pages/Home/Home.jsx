@@ -16,7 +16,6 @@ const Home = () => {
     <div className="home-page">
       <Nav></Nav>
       <HomeHeader />
-
       {!context.data.userData ? (
         <Calculator></Calculator>
       ) : (
