@@ -98,3 +98,10 @@
 a {
   text-decoration: none;
 }
+
+.badge {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  width: 0.5rem;
+}

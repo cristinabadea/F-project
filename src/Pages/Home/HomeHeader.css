@@ -2,7 +2,6 @@
 
 .carousel-container {
   border: 2px solid rgb(91, 91, 91);
-  margin-bottom: 2rem;
 }
 
 #header-img {
@@ -21,8 +20,9 @@
   }
 }
 
-.caption-div {
+.caption-h4 {
   color: black;
+  text-align: center;
 }
 #adding-color {
   color: white;

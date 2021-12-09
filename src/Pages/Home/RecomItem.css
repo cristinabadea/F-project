@@ -1,5 +1,4 @@
 /** @format */
-
 .recom-row {
   display: flex;
   flex-direction: row;
@@ -31,15 +30,15 @@
 }
 
 .recom-btn {
+  display: block;
+  margin: 0 auto;
   color: rgba(0, 0, 0, 0.55);
   font-size: 15px;
   text-align: center;
-  width: 20rem;
-  height: 4rem;
+  width: 8rem;
+  height: 3rem;
   border-radius: 30px;
   border: rgb(5, 44, 49);
-  margin-left: 40%;
-  margin-bottom: 2rem;
 
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;

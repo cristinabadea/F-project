@@ -4,14 +4,12 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../../Contexts/Context";
 import { ImageContext } from "../../Contexts/ImageContext";
 import RecomItem from "./RecomItem";
-import { Link } from "react-router-dom";
-import ItemDetails from "./ItemDetails";
 
 const RecomSkis = () => {
   const context = useContext(Context);
+
   const imageContext = useContext(ImageContext);
 
-  console.log("recom skis: " + imageContext);
   const [answer, setAnswer] = useState({
     height: context.data?.userData?.height ?? "",
     weight: context.data?.userData?.weight ?? "",

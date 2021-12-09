@@ -46,3 +46,7 @@ hr {
   margin-left: 1rem;
   text-align: center;
 }
+
+.col-sm a {
+  color: black;
+}

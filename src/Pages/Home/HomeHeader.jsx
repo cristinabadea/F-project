@@ -26,11 +26,11 @@ const HomeHeader = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <div className="caption-div">
+            <h4 className="caption-h4">
               Our <strong>ski size calculator</strong> is designed to help you
               choose the perfect gear to make one of the most popular winter
               activities even more enjoyable!
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -41,10 +41,10 @@ const HomeHeader = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <div className="caption-div">
+            <h4 className="caption-h4">
               Knowing <strong>how to size skis</strong> can make a real
               difference to your experience.
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -55,10 +55,10 @@ const HomeHeader = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <div className="caption-div">
+            <h4 className="caption-h4">
               As you probably know, the skis are not just some strips of plastic
               that you can randomly wear.
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -69,9 +69,9 @@ const HomeHeader = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <div className="caption-div" id="adding-color">
+            <h4 className="caption-h4" id="adding-color">
               Choosing skis can be daunting, but we're here to help you!
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -82,10 +82,10 @@ const HomeHeader = () => {
             alt="Second slide"
           />
           <Carousel.Caption>
-            <div className="caption-div">
+            <h4 className="caption-h4">
               Picking the right skis begins at the most basic level by knowing
               what <strong>length</strong> is appropriate for you.
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -96,11 +96,11 @@ const HomeHeader = () => {
             alt="Second slide"
           />
           <Carousel.Caption>
-            <div className="caption-div">
+            <h4 className="caption-h4">
               Finding your perfect skis is strongly influenced by your{" "}
               <strong>ability level</strong> but also by your{" "}
               <strong>riding style</strong> and <strong>terrain choice</strong>.
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -111,9 +111,9 @@ const HomeHeader = () => {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <div className="caption-div">
+            <h4 className="caption-h4">
               <strong>Let us guide you through the process below!</strong>
-            </div>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

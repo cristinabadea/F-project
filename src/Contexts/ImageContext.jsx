@@ -25,33 +25,27 @@ const ImageContext = React.createContext();
 
 const ImageContextProvider = (props) => {
   const [items, setItems] = useState({
-    name: "My cart",
-    cart: [],
     products: [
-      { title: "Atomic MBP1", imageUrl: MalePisteB1, id: 1 },
-      { title: "Atomic MBP2", imageUrl: MalePisteB2, id: 2 },
-      { title: "Atomic MIP1", imageUrl: MalePisteI1, id: 3 },
-      { title: "Atomic MIP2", imageUrl: MalePisteI2, id: 4 },
-      { title: "Atomic MAP1", imageUrl: MalePisteA1, id: 5 },
-      { title: "Atomic MAP2", imageUrl: MalePisteA2, id: 6 },
-      { title: "Atomic FBP1", imageUrl: FemPisteB1, id: 7 },
-      { title: "Atomic FBP2", imageUrl: FemPisteB2, id: 8 },
-      { title: "Atomic FIP1", imageUrl: FemPisteInt1, id: 9 },
-      { title: "Atomic FIP2", imageUrl: FemPisteInt2, id: 10 },
-      { title: "Atomic FAP1", imageUrl: FemPisteA1, id: 11 },
-      { title: "Atomic FAP2", imageUrl: FemPisteA2, id: 12 },
-      { title: "Atomic MBoP", imageUrl: MixedOffB1, id: 13 },
-      { title: "Atomic FBoP", imageUrl: MixedOffB2, id: 14 },
-      { title: "Atomic MIoP", imageUrl: MixedOffInt1, id: 15 },
-      { title: "Atomic FIoP", imageUrl: MixedOffInt2, id: 16 },
-      { title: "Atomic MAoP", imageUrl: MixedOffA1, id: 17 },
-      { title: "Atomic FAoP", imageUrl: MixedOffA2, id: 18 },
+      { title: "Atomic MBP1", imageUrl: MalePisteB1, id: 1, price: 3229 },
+      { title: "Atomic MBP2", imageUrl: MalePisteB2, id: 2, price: 3229 },
+      { title: "Atomic MIP1", imageUrl: MalePisteI1, id: 3, price: 3229 },
+      { title: "Atomic MIP2", imageUrl: MalePisteI2, id: 4, price: 3229 },
+      { title: "Atomic MAP1", imageUrl: MalePisteA1, id: 5, price: 3229 },
+      { title: "Atomic MAP2", imageUrl: MalePisteA2, id: 6, price: 3229 },
+      { title: "Atomic FBP1", imageUrl: FemPisteB1, id: 7, price: 3229 },
+      { title: "Atomic FBP2", imageUrl: FemPisteB2, id: 8, price: 3229 },
+      { title: "Atomic FIP1", imageUrl: FemPisteInt1, id: 9, price: 3229 },
+      { title: "Atomic FIP2", imageUrl: FemPisteInt2, id: 10, price: 3229 },
+      { title: "Atomic FAP1", imageUrl: FemPisteA1, id: 11, price: 3229 },
+      { title: "Atomic FAP2", imageUrl: FemPisteA2, id: 12, price: 3229 },
+      { title: "Atomic MBoP", imageUrl: MixedOffB1, id: 13, price: 3229 },
+      { title: "Atomic FBoP", imageUrl: MixedOffB2, id: 14, price: 3229 },
+      { title: "Atomic MIoP", imageUrl: MixedOffInt1, id: 15, price: 3229 },
+      { title: "Atomic FIoP", imageUrl: MixedOffInt2, id: 16, price: 3229 },
+      { title: "Atomic MAoP", imageUrl: MixedOffA1, id: 17, price: 3229 },
+      { title: "Atomic FAoP", imageUrl: MixedOffA2, id: 18, price: 3229 },
     ],
   });
-
-  const addToCart = (product) => {
-    setItems({ ...items, cart: [...items.cart, product] });
-  };
 
   return (
     <ImageContext.Provider value={{ ...items }}>

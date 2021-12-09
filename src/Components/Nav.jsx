@@ -2,10 +2,12 @@
 
 import React from "react";
 import "./Nav.css";
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const MyNav = () => {
+const MyNav = (props) => {
+  const { countCartItems } = props;
+
   return (
     <div className="my-navbar">
       <Navbar className="my-nav-title" expand="lg">
@@ -25,6 +27,16 @@ const MyNav = () => {
 
             <Link to="/blog">
               <Nav.Link href="#action2">Blog</Nav.Link>
+            </Link>
+            <Link to="/cart">
+              <Nav.Link href="#action3">
+                Cart{" "}
+                {countCartItems ? (
+                  <button className="badge">{countCartItems}</button>
+                ) : (
+                  " "
+                )}
+              </Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>
