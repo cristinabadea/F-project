@@ -39,7 +39,7 @@ const Cart = () => {
       );
     }
   };
-  console.log("cart console: " + cartItems.length);
+
   return (
     <div>
       <MyNav countCartItems={cartItems.length}></MyNav>
