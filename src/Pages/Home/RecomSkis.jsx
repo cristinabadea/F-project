@@ -85,7 +85,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 136 - 139 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -113,7 +113,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -233,7 +233,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 136 - 139 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -261,7 +261,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -389,7 +389,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 141 - 144 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -417,7 +417,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -546,7 +546,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 141 - 143 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -574,7 +574,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -705,7 +705,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 146 - 149 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -733,7 +733,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -861,7 +861,7 @@ const RecomSkis = () => {
         ...answer,
         recom1: `Suggested ski lengh: 145 - 148 cm.`,
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -889,7 +889,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -1018,7 +1018,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 151 - 153 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1046,7 +1046,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -1175,7 +1175,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 150 - 152 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1203,7 +1203,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -1332,7 +1332,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 155 - 157 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1360,7 +1360,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -1489,7 +1489,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 155 - 158 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1517,7 +1517,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -1646,7 +1646,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 161 - 165 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1674,7 +1674,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -1802,7 +1802,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 161 - 165 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1829,7 +1829,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -1956,7 +1956,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 166 - 169 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -1984,7 +1984,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -2112,7 +2112,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 166 - 169 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -2140,7 +2140,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -2269,7 +2269,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 169 - 172 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -2297,7 +2297,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -2426,7 +2426,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 169 - 171 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -2454,7 +2454,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -2583,7 +2583,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 173 - 176 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -2611,7 +2611,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -2740,7 +2740,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 173 - 176 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -2768,7 +2768,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
@@ -2894,7 +2894,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 177 - 181 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -2921,7 +2921,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[14].imageUrl,
@@ -3045,7 +3045,7 @@ const RecomSkis = () => {
         recom1: `Suggested ski lengh: 177 - 181 cm.`,
 
         recom2: ` The majority of skiers and skis fall into intermediate level, whether you like to carve on groomers or venture into the powder. 
-        These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
         Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         recom3: `Piste skiing is the most accessible form of skiing, suited for the entire family, you'll have to go through it before jumping on other terrains. 
@@ -3072,7 +3072,7 @@ const RecomSkis = () => {
                 Overall skiing experience should be a minimum of 10 weeks.
                 Off piste experience minimum 3 weeks with a mountain guide.`,
 
-        recom3: `These skis are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
+        recom3: `The skis you need are  generally somewhat wider than beginner-intermediate skis, with a stronger wood core and sandwich sidewall construction.
                 Depending on the type of ski, intermediate-advanced level skis may have full camber, rocker, or some combination of the two.`,
 
         image: imageContext.products[15].imageUrl,
