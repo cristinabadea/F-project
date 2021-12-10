@@ -12,7 +12,13 @@
   padding: 1rem;
 }
 .recom-col-background h4 {
-  margin-left: 1rem;
+  text-align: center;
+}
+
+.another-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #recom-list {
   list-style: linear-gradient(white, gray, black);
@@ -84,4 +90,19 @@
 
 .do-not-display {
   display: none;
+}
+
+/* Accordion */
+
+.accordion-collapse .accordion-body {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.accordion-item .accordion-header .accordion-button strong {
+  font-size: 1.2rem;
+  padding: 2px 2px 2px 2px;
+  font-weight: normal;
+}
+.accordion-item .accordion-header .accordion-button {
+  background-color: transparent;
 }

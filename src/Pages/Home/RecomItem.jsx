@@ -19,6 +19,11 @@ const RecomItem = (props) => {
             <li>{props.recom1}</li>
             <li>{props.recom2}</li>
             <li>{props.recom3}</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
         <div className="recom-col recom-col-background">
