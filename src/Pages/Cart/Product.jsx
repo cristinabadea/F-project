@@ -9,8 +9,9 @@ const Product = (props) => {
   return (
     <div className="product-card">
       <img className="product-img" src={product.imageUrl} alt={product.title} />
-      <h3>{product.title}</h3>
-      <div>RON {product.price}</div>
+      <hr />
+      <div className="product-title">{product.title}</div>
+      <div className="product-price">{product.price} RON</div>
       <div>
         <button onClick={() => onAdd(product)} id="my-button">
           {" "}

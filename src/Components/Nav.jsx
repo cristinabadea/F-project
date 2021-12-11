@@ -30,7 +30,7 @@ const MyNav = (props) => {
             </Link>
             <Link to="/cart">
               <Nav.Link href="#action3">
-                Cart{" "}
+                Cart
                 {countCartItems ? (
                   <button className="badge">{countCartItems}</button>
                 ) : (

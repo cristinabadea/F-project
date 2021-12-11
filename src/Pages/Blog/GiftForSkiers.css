@@ -4,17 +4,15 @@
   color: rgba(0, 0, 0, 0.55);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background: linear-gradient(
-    to right,
-    rgb(251, 253, 254) 0%,
-    rgb(201, 216, 249),
-    rgb(255, 255, 255) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
-  padding-left: 2rem;
+}
+.blog-page-title h1,
+.blog-page-title h4 {
+  margin-left: 2rem;
+}
+.blog-page-title h1 {
+  color: black;
 }
 #gift-image {
-  overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   transition: 0.5s;
   animation: ease-in;
@@ -22,12 +20,15 @@
 
   border-color: rgb(127, 204, 228);
   background-color: none;
-  height: 25rem;
-  max-width: 25%;
-  position: relative;
+  max-height: 25rem;
+  max-width: 40%;
   margin-left: 5%;
+  margin-bottom: 2rem;
 }
 .description-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   color: rgba(0, 0, 0, 0.55);
   max-width: 320px;
   margin-left: auto;

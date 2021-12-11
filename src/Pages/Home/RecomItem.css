@@ -1,66 +1,84 @@
 /** @format */
+
+.recom-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+.recom-subtitle {
+  font-size: 2rem;
+  text-align: center;
+}
 .recom-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   margin: 2rem 7rem 1rem 7rem;
 }
-.recom-col-background h1 {
-  font-size: 5rem;
-  text-align: center;
-  padding: 1rem;
-}
-.recom-col-background h4 {
-  text-align: center;
+.recom-row {
+  align-self: stretch;
+  border: 1px solid rgb(201, 216, 249);
 }
 
-.another-row {
+.recom-col-background {
+  padding: 1rem;
+  border-left: rgb(201, 216, 249);
+}
+
+.col-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
-#recom-list {
-  list-style: linear-gradient(white, gray, black);
+.recom-img h5 {
+  margin: 1rem;
+  text-align: center;
+}
+#btn-details {
+  background-color: white;
+  border: none;
+}
+
+#btn-details details {
+  margin: 1rem;
+}
+#btn-details details p {
   text-align: justify;
 }
+#recom-list {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  list-style: none;
+  text-align: justify;
+}
+
 .recom-col-background ul li {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1rem;
 }
+
+/* Image style */
 .img1 {
   margin-bottom: 2rem;
-  width: 14rem;
+  width: 20rem;
   height: 20rem;
   transition: all 0.5s ease-in-out 0.1s;
 }
 .img1:hover {
   cursor: default;
-  transform: scale(2.3);
+  transform: scale(1.5);
   border: 1px solid black;
-}
-
-.recom-col-background {
-  align-self: stretch;
-  flex-grow: 1;
-  background: linear-gradient(
-    to right,
-    rgb(251, 253, 254) 0%,
-    rgb(201, 216, 249),
-    rgb(255, 255, 255) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
-  transition: 0.6s;
-  animation: linear;
-}
-.recom-col p {
-  text-align: justify;
-  padding: 0.5rem;
+  filter: brightness(120%);
 }
 
 .recom-btn {
   display: block;
   margin: 0 auto;
+  margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.55);
   font-size: 15px;
   text-align: center;
@@ -94,9 +112,21 @@
 
 /* Accordion */
 
+.accordion-container {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 .accordion-collapse .accordion-body {
   font-size: 1.1rem;
   text-align: justify;
+}
+.accordion-item,
+.accordion-collapse {
+  align-items: center;
+  border-collapse: unset;
 }
 .accordion-item .accordion-header .accordion-button strong {
   font-size: 1.2rem;
@@ -105,4 +135,19 @@
 }
 .accordion-item .accordion-header .accordion-button {
   background-color: transparent;
+}
+
+#a-b {
+  background-color: rgb(201, 216, 249);
+}
+#a-h strong {
+  color: black;
+  border: none;
+}
+
+.accordion-button,
+.accordion-collapse,
+.show {
+  border-collapse: none;
+  border: none;
 }

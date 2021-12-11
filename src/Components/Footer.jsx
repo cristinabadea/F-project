@@ -2,24 +2,6 @@
 
 import React from "react";
 import "./Footer.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faInstagram,
-//   faFacebook,
-//   faTwitter,
-// } from "@fortawesome/free-brands-svg-icons";
-// import {
-//   faLocationArrow,
-//   faAddressBook,
-//   faAddressCard,
-// } from "@fortawesome/free-solid-svg-icons";
-
-// const element1 = <FontAwesomeIcon icon={faLocationArrow} />;
-// const element2 = <FontAwesomeIcon icon={faAddressBook} />;
-// const element3 = <FontAwesomeIcon icon={faAddressCard} />;
-// const element4 = <FontAwesomeIcon icon={faInstagram} />;
-// const element5 = <FontAwesomeIcon icon={faTwitter} />;
-// const element6 = <FontAwesomeIcon icon={faFacebook} />;
 
 class Footer extends React.Component {
   render() {
@@ -58,7 +40,7 @@ class Footer extends React.Component {
         {/* Second row */}
         <div className="row">
           <div className="col-sm">
-            &copy;{new Date().getFullYear()} Company Name | All rights reserved
+            &copy;{new Date().getFullYear()} Ski Lovers | All rights reserved
             <a
               rel="noreferrer"
               target="_blank"

@@ -38,10 +38,6 @@ function GiftsForSkiers() {
                 Achieve instant mountain vibes with this naturally shed antler
                 candle holder.
               </p>
-
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -58,9 +54,6 @@ function GiftsForSkiers() {
               <p>
                 You'll be the most fabulously dressed for après ski cocktails.
               </p>
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -79,9 +72,6 @@ function GiftsForSkiers() {
                 moderate spice of rye, Outryder is the result of marrying two
                 distinctive mash bills that use corn, rye, and malted barley.
               </p>
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -98,9 +88,6 @@ function GiftsForSkiers() {
               <p>
                 The perfect accessory to complete that snow bunny chic look.{" "}
               </p>
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -119,9 +106,6 @@ function GiftsForSkiers() {
                 Get pumped for the slopes with your first sip of morning coffee
                 and even your mold wine.
               </p>
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -140,9 +124,6 @@ function GiftsForSkiers() {
                 A gorgeous, retro-inspired cowhide glove with wool terry lining
                 and paracord wrist adjustment.{" "}
               </p>
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -162,9 +143,6 @@ function GiftsForSkiers() {
                 racing socks by legendary German base layer brand Falke are some
                 of the best on the market.
               </p>
-              <Link to="/">
-                <Button className="buy-button"> See on site!</Button>
-              </Link>
             </div>
           </Carousel.Caption>
         </Carousel.Item>

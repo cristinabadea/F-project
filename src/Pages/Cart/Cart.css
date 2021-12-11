@@ -1,77 +1,106 @@
 /** @format */
 
-body {
+/* body {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     sans-serif;
 }
+*/
 
-h1,
-h2,
-h3 {
-  margin: 0.5rem 0;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-h2 {
-  font-size: 1.2rem;
-}
-h3 {
-  font-size: 1rem;
-}
-a {
-  text-decoration: none;
-}
-
+/* Header Component */
 .header-row {
   display: flex;
   justify-content: space-between;
 }
+.h-i-1 {
+  margin-left: 7rem;
+}
+.h-i-1 h1 {
+  color: black;
+}
+.h-i-2 {
+  margin-right: 5rem;
+}
+/* HeaderComponent END */
+
+/* Main Component */
 .main-row {
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-between;
-}
-.col-1 {
-  flex: 1;
-}
-.col-2 {
-  flex: 2;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .block {
-  background-color: #e0e0e0;
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
+/* Main Component END */
 
-.header-row.center {
-  align-items: center;
-}
-
-/* PRODUCT COMPONENT */
+/* Product Component */
 .product-card {
-  border: 1px solid black;
-  margin: 0.3rem;
+  border: 1px solid rgb(201, 216, 249);
+  margin: 3rem;
   padding-bottom: 0.3rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.6);
+  transition: 0.6s;
+  animation: linear;
+}
+.product-card:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.2);
+  box-shadow: 0px 0px 13px 0px;
 }
 
-.product-card h3,
 .product-card div {
   text-align: center;
 }
 .product-img {
-  max-height: 8rem;
+  max-height: 18rem;
+  width: 16rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
-#my-button {
+.product-title {
+  font-size: 0.7rem;
+}
+.product-price {
+  font-size: 1rem;
   color: rgba(0, 0, 0, 0.55);
-  font-size: 12px;
+}
+#my-button {
+  margin: 1rem 0 1rem 0;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1rem;
   text-align: center;
-  width: 4rem;
-  height: 2.5rem;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: rgb(5, 44, 49);
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(201, 216, 249),
+    rgb(255, 255, 255) 100%
+  );
+}
+
+/* Product Component END */
+
+/* BasketStyle Component */
+#my-cart-button {
+  margin-right: 3rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1.2rem;
+  text-align: center;
+  width: 8rem;
+  height: 3rem;
   border-radius: 1rem;
   border: rgb(5, 44, 49);
   overflow: hidden;
@@ -87,12 +116,83 @@ a {
   animation: linear;
 }
 
-#my-button:hover {
+#my-cart-button:hover {
+  color: azure;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px 0px;
+}
+.text-right {
+  text-align: right;
+}
+
+#cart-btn {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-right: 0.8rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: rgb(5, 44, 49);
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(201, 216, 249),
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  transition: 0.6s;
+  animation: linear;
+}
+#cart-btn:hover {
+  color: azure;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px 0px;
+}
+.item-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.calc1 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.costs {
+  margin-top: 0.7rem;
+}
+.costs div strong {
+  margin-bottom: 1rem;
+}
+#checkout {
+  margin: 1rem 0 1rem 0;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1rem;
+  text-align: center;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: rgb(5, 44, 49);
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background: linear-gradient(
+    to right,
+    rgb(251, 253, 254) 0%,
+    rgb(201, 216, 249),
+    rgb(255, 255, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
+  transition: 0.6s;
+  animation: linear;
+}
+
+#checkout:hover {
   color: azure;
   transform: scale(1.08);
   box-shadow: 0px 0px 15px 0px;
 }
 
-.text-right {
-  text-align: right;
-}
+/* BasketStyle Component END */

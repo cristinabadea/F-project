@@ -4,7 +4,6 @@ import React, { useContext, useState } from "react";
 import MyNav from "../../Components/Nav";
 import Footer from "../../Components/Footer";
 import Header from "./Header";
-import Basket from "./Basket";
 import Main from "./Main";
 import "./Cart.css";
 import { ImageContext } from "../../Contexts/ImageContext";
@@ -43,17 +42,8 @@ const Cart = () => {
   return (
     <div>
       <MyNav countCartItems={cartItems.length}></MyNav>
-      <div>
-        <Header />
-        <div className="main-row">
-          <Main onAdd={onAdd} products={products}></Main>
-          <Basket
-            onAdd={onAdd}
-            onRemove={onRemove}
-            cartItems={cartItems}
-          ></Basket>
-        </div>
-      </div>
+      <Header onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
+      <Main onAdd={onAdd} products={products}></Main>
       <Footer />
     </div>
   );

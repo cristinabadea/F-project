@@ -8,18 +8,16 @@
     rgb(201, 216, 249),
     rgb(255, 255, 255) 100%
   );
-
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfdfe', endColorstr='#ffffff', GradientType=1 );
 }
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 .col {
-  text-align: left;
+  text-align: justify;
   margin-left: 2rem;
   margin-top: 1rem;
   align-content: center;
